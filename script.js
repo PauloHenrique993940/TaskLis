@@ -41,6 +41,7 @@ const tasks = [
     },
 ];
 
+//No código o objeto tasks foi passado como Parametro na função renderElents
 function renderElements(tasks) {
     const ulElement = document.querySelector(".tasks__list");
     ulElement.innerHTML = "";
@@ -63,7 +64,6 @@ function createTaskItem(task, index) {
     span.className = "task-type";
     p.textContent = task.title;
     button.className = "task__button--remove-task";
-    
 
     switch (task.type.toLowerCase()) {
         case "urgente":
@@ -92,8 +92,10 @@ function createTaskItem(task, index) {
     return li;
 }
 
+// Renderiza as tarefas ao carregar a página
 renderElements(tasks);
 
+// Adiciona evento para adicionar nova tarefa
 const form = document.getElementById("task-form");
 const addButton = document.getElementById("add-task-button");
 
@@ -115,3 +117,4 @@ addButton.addEventListener("click", () => {
         alert("Por favor, preencha ambos os campos.");
     }
 });
+
