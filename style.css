@@ -2,8 +2,7 @@ body{
     font-family: "Roboto", sans-serif;
     background: #e2e2e2;
     font-style: normal;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    
     
 }
 
@@ -13,7 +12,8 @@ body{
     justify-content: center;
     padding: 40px;
     background-color: #fff;
-    width: 100%;
+    width: auto;
+    
 
 }
 
@@ -21,6 +21,7 @@ body{
     display: flex;
     align-items: center;
     gap: 400px;
+
     
 }
 
@@ -31,7 +32,7 @@ body{
 
 .header__input--search{
     background: #ebebeb;
-    width: 600px;
+    width: 500px;
     height: 50px;
     padding: 10px;
     border-radius: 8px;
@@ -46,8 +47,8 @@ body{
     padding: 60px;
     background: #fff;
     margin-top: 40px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 200px;
+    margin-right: 200px;
     border-radius: 8px;
 
 }
@@ -116,11 +117,13 @@ option{
 .tasks__container{
     background: #fff;
     margin-top: 40px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 200px;
+    margin-right: 200px;
     border-radius: 8px;
     font-family: "Roboto";
-    padding: 60px;
+    padding: 40px;
+    height: 100% auto;
+    margin-bottom: 20px;
 }
 
 h2{
@@ -142,9 +145,7 @@ h2{
     transition: background-color 0.3s ease;
 }
 
-.task__item:hover {
-    background-color: #a8a7a7;
-}
+
 
 .task-info__container {
     display: flex;
