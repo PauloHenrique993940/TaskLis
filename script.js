@@ -41,18 +41,17 @@ const tasks = [
     },
 ];
 
-//No código o objeto tasks foi passado como Parametro na função renderElents
 function renderElements(tasks) {
     const ulElement = document.querySelector(".tasks__list");
     ulElement.innerHTML = "";
 
-    tasks.forEach((task, index) => {
-        const taskItem = createTaskItem(task, index);
+    tasks.forEach(task => {
+        const taskItem = createTaskItem(task);
         ulElement.appendChild(taskItem);
     });
 }
 
-function createTaskItem(task, index) {
+function createTaskItem(task) {
     const li = document.createElement("li");
     const div = document.createElement("div");
     const span = document.createElement("span");
@@ -80,8 +79,11 @@ function createTaskItem(task, index) {
     }
 
     button.addEventListener("click", () => {
-        tasks.splice(index, 1);
-        renderElements(tasks);
+        const index = tasks.indexOf(task);
+        if (index !== -1) {
+            tasks.splice(index, 1);
+            renderElements(tasks);
+        }
     });
 
     div.appendChild(span);
